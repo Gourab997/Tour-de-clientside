@@ -9,8 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 const CreatePackage = () => {
   const notify = () => toast("Package Created!");
   const { register, handleSubmit, reset } = useForm();
-    const onSubmit = (data) => {
-      
+  const onSubmit = (data) => {
     console.log(data);
     axios.post("http://localhost:5000/createPackage", data).then((res) => {
       if (res.data.insertedId) {
