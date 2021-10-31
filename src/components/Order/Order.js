@@ -1,19 +1,27 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 
-const Order = ({ order }) => {
-  const { status, packagename, image, person, email, date } = order;
+const Order = (props) => {
+  const { _id, status, packagename, image, person, email, date } = props.order;
+
   return (
     <div>
-      <div class='' style={{ maxWidth: "540px" }}>
+      <div class='card my-5' style={{ maxWidth: "540px" }}>
         <div class='row g-0'>
           <div class='col-md-4'>
-            <img src={image} class='img-fluid rounded-start' alt='...' />
+            <img src={image} class='img-fluid m-5 rounded-start' alt='...' />
           </div>
           <div class='col-md-8'>
             <div class='card-body'>
-              <h5 class='card-title'>{packagename}</h5>
-              <p class='card-text'>{status}</p>
+              <h5 class='card-title'>
+                {packagename}{" "}
+                {status === "pending" ? (
+                  <p className='badge bg-danger'> Pending </p>
+                ) : (
+                  <p className='badge bg-success'> Approve</p>
+                )}
+              </h5>
+
               <p class='card-text'>{email}</p>
               <p class='card-text'>
                 <small class='text-muted'>{date}</small>
@@ -21,7 +29,13 @@ const Order = ({ order }) => {
               <p class='card-text'>
                 <small class='text-muted'>Person: {person}</small>
               </p>
-              <Button className='btn btn-danger'>Remove</Button>
+
+              <Button
+                onClick={() => props.handleDelete(_id)}
+                className='btn btn-danger'
+              >
+                Remove
+              </Button>
             </div>
           </div>
         </div>

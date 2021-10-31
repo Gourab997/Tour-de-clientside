@@ -10,7 +10,7 @@ const Packages = () => {
   const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false);
   useEffect(() => {
-    const url = "http://localhost:5000/package";
+    const url = "https://evening-depths-30944.herokuapp.com/package";
     setLoading(false);
     fetch(url)
       .then((res) => res.json())

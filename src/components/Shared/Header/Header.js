@@ -14,25 +14,31 @@ const Header = () => {
           collapseOnSelect
           expand='lg'
         >
-          <Container>
+          <Container className='sticky-top'>
             <Navbar.Brand className='text-warning' as={HashLink} to='/'>
               <img src={bannerLogo} style={{ width: "250px" }} alt='' />
             </Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse className='justify-content-end'>
-              <Nav.Link className='text-white' as={HashLink} to='/home#home'>
+              <Nav.Link className='text-white' as={HashLink} to='/'>
                 Home
               </Nav.Link>
-              <Nav.Link
-                className='text-white'
-                as={HashLink}
-                to='/home#services'
-              >
-                Services
-              </Nav.Link>
+
               <Nav.Link className='text-white' as={HashLink} to='/about'>
                 About
               </Nav.Link>
+              <Nav.Link className='text-white' as={HashLink} to='/createReview'>
+                Review
+              </Nav.Link>
+              {user?.email && (
+                <Nav.Link
+                  className='text-white'
+                  as={HashLink}
+                  to='/manageBooking'
+                >
+                  All Booking
+                </Nav.Link>
+              )}
               {user?.email && (
                 <Nav.Link className='text-white' as={HashLink} to='/order'>
                   My Order

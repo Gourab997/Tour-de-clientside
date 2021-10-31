@@ -11,13 +11,15 @@ const CreatePackage = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/createPackage", data).then((res) => {
-      if (res.data.insertedId) {
-        alert("Package Created");
-        notify();
-        reset();
-      }
-    });
+    axios
+      .post("https://evening-depths-30944.herokuapp.com/createPackage", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("Package Created");
+          notify();
+          reset();
+        }
+      });
   };
   return (
     <div className='container mt-5'>

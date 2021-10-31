@@ -19,7 +19,7 @@ const Booking = () => {
   const redirect = "/order";
 
   useEffect(() => {
-    fetch("http://localhost:5000/package")
+    fetch("https://evening-depths-30944.herokuapp.com/package")
       .then((res) => res.json())
       .then((data) => setPackageDetails(data));
   }, []);
@@ -33,7 +33,7 @@ const Booking = () => {
     data.image = singlePackage?.image;
     data.packagename = singlePackage?.packageName;
     console.log(data);
-    fetch("http://localhost:5000/createBooking", {
+    fetch("https://evening-depths-30944.herokuapp.com/createBooking", {
       method: "POST",
       headers: {
         "content-type": "application/json",

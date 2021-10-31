@@ -1,12 +1,13 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import firstImage from "../../images/vid-1.mp4";
-import secoundImage from "../../images/vid-2.mp4";
+import secoundImage from "../../images/vid-4.mp4";
 import thirdImage from "../../images/vid-5.mp4";
 import "./Banner.css";
+
 const Banner = () => {
   return (
-    <div>
+    <div id='#home'>
       <Carousel fade>
         <Carousel.Item style={{ height: "820px" }}>
           <video

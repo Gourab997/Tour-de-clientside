@@ -11,9 +11,16 @@ import Login from "./components/Login/Login/Login";
 import Booking from "./components/Booking/Booking";
 import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
 import Orders from "./components/Orders/Orders";
+
+import AllOrders from "./components/AllOrders/AllOrders";
+import Review from "./components/Reviews/Review";
+import NotFound from "./components/NotFound/NotFound";
+import Footer from "./components/Shared/Footer/Footer";
+import About from "./components/About/About";
+
 function App() {
   return (
-    <div className=''>
+    <div className='App'>
       <AuthProvider>
         <Router>
           <Header></Header>
@@ -21,7 +28,13 @@ function App() {
             <Route exact path='/'>
               <Home></Home>
             </Route>
+            <Route path='/home'>
+              <Home></Home>
+            </Route>
 
+            <Route path='/about'>
+              <About></About>
+            </Route>
             <Route path='/createPackage'>
               <CreatePackage></CreatePackage>
             </Route>
@@ -31,10 +44,20 @@ function App() {
             <PrivateRoute path='/order'>
               <Orders></Orders>
             </PrivateRoute>
+            <PrivateRoute path='/manageBooking'>
+              <AllOrders></AllOrders>
+            </PrivateRoute>
+            <PrivateRoute path='/createReview'>
+              <Review></Review>
+            </PrivateRoute>
             <Route path='/login'>
               <Login></Login>
             </Route>
+            <Route path='*'>
+              <NotFound></NotFound>
+            </Route>
           </Switch>
+          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>
