@@ -9,7 +9,7 @@ const Banner = () => {
   return (
     <div id='#home'>
       <Carousel fade>
-        <Carousel.Item style={{ height: "820px" }}>
+        <Carousel.Item className='caros'>
           <video
             className=''
             style={{ width: "100%" }}
@@ -29,7 +29,7 @@ const Banner = () => {
             </p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item style={{ height: "850px" }}>
+        <Carousel.Item className='caros'>
           <video
             className=''
             style={{ width: "100%" }}
@@ -49,7 +49,7 @@ const Banner = () => {
             </p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item style={{ height: "850px" }}>
+        <Carousel.Item className='caros'>
           <video
             className=' '
             style={{ width: "100%" }}

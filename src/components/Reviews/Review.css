@@ -3,3 +3,27 @@
   justify-content: center;
   align-items: center;
 }
+@media only screen and (max-width: 688px) {
+  .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .myReview {
+    overflow: hidden;
+    max-width: 70%;
+  }
+}
+@media only screen and (min-width: 689px) and (max-width: 991px) {
+  .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .myReview {
+    overflow: hidden;
+    max-width: 70%;
+  }
+}

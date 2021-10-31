@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import aboutBanner from "../../images/about.svg";
 import map from "../../images/map.svg";
 import "./About.css";
 const About = () => {
   return (
     <div className='container'>
-      <img className='m-5' src={aboutBanner} alt='' />
+      <img className='m-5 aboutImg' src={aboutBanner} alt='' />
       <h1 className=' text-success '>About us</h1>
       <p className='pe-5'>
         Tour de is a corporate tour operator and travel agency located in
@@ -93,7 +93,7 @@ const About = () => {
           committed to offering competitive value for money travel at the best
           quality in order to go beyond the customer's expectation
         </p>
-        <img className='pe-5 py-5' src={map} alt='' srcset='' />
+        <img className='pe-5 py-5 aboutImg' src={map} alt='' srcset='' />
       </div>
     </div>
   );

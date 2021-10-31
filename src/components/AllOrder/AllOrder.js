@@ -7,8 +7,8 @@ const AllOrder = (props) => {
     props.order;
 
   return (
-    <div className='container'>
-      <Table className='table-responsive container striped bordered hover m-5 size="sm"'>
+    <div className='container table'>
+      <Table className='table-responsive container striped bordered hover m-lg-5 size="sm"'>
         <thead>
           <tr>
             <th>Name</th>

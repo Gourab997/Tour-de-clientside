@@ -4,3 +4,23 @@
   grid-column-gap: 20px;
   grid-row-gap: 30px;
 }
+@media only screen and (max-width: 688px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  .reviews {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+  }
+}
+@media only screen and (min-width: 689px) and (max-width: 991px) {
+  .reviews {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+  }
+}

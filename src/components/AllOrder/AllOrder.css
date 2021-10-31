@@ -1,3 +1,15 @@
 .tableWidth {
   width: 50px;
 }
+@media only screen and (max-width: 688px) {
+  .table {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+}
+@media only screen and (min-width: 689px) and (max-width: 991px) {
+  .table {
+    overflow: hidden;
+  }
+}

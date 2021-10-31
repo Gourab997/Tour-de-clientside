@@ -6,10 +6,10 @@ const Order = (props) => {
 
   return (
     <div>
-      <div class='card my-5' style={{ maxWidth: "540px" }}>
+      <div class='card my-5' style={{ maxWidth: "520px" }}>
         <div class='row g-0'>
           <div class='col-md-4'>
-            <img src={image} class='img-fluid m-5 rounded-start' alt='...' />
+            <img src={image} class='img-fluid m-lg-5 rounded-start' alt='...' />
           </div>
           <div class='col-md-8'>
             <div class='card-body'>

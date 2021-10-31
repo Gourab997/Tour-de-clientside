@@ -85,13 +85,17 @@ p {
   .containers .content {
     max-width: 100%;
   }
+  .aboutImg {
+    max-width: 70%;
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 500px) {
-  body {
-    padding: 25px;
+  .aboutImg {
+    width: 70%;
+    overflow: hidden;
   }
-
   .s {
     width: 100%;
   }

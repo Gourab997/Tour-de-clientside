@@ -21,3 +21,28 @@
 .heading span.space {
   background: none;
 }
+@media only screen and (max-width: 688px) {
+  .heading {
+    display: none;
+  }
+  .pack {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 50px;
+  }
+
+  .heading {
+    overflow: hidden;
+    font-size: 5px;
+    background: #529e8a;
+    color: var(--green);
+    border-radius: 20px;
+    padding: 2px 5px;
+  }
+}
+@media only screen and (min-width: 689px) and (max-width: 991px) {
+  .heading s {
+    overflow: hidden;
+  }
+}

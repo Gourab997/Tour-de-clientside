@@ -1,3 +1,26 @@
 .bannerText {
   font-size: 60px;
 }
+.caros {
+  height: "820px";
+}
+
+@media only screen and (max-width: 688px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  .caros {
+    overflow: hidden;
+    height: 250px;
+  }
+  .bannerText {
+    overflow: hidden;
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 689px) and (max-width: 991px) {
+  .bannerText {
+    font-size: 30px;
+  }
+}

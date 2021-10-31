@@ -46,7 +46,7 @@ const Review = () => {
 
         <div className='contact'>
           <div>
-            <img src={review} alt='' />
+            <img  className="myReview" src={review} alt='' />
           </div>
           <div>
             <form onSubmit={handleSubmit(onSubmit)}>
